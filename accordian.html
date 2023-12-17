@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(gallary/bg17.jpg);
+
+        }
+
+        .accordionBox {
+            width: 2000px;
+            margin: 50px;
+            max-width: 30rem;
+            padding: 10px 10px;
+            border-radius: 0.4rem;
+            background-color: #de9b9b;
+            border: 5px solid burlywood;
+        }
+
+        .accordionItem {
+            transition: all 0.4s;
+            border-radius: 0.4rem;
+        }
+
+        .accordionItem:first-child {
+            margin-top: 0 !important;
+        }
+
+        .accordionItem:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        .accordionItem .header {
+            display: flex;
+            cursor: pointer;
+            padding: 10px 10px;
+            align-items: center;
+            border-radius: 0.4rem;
+            justify-content: space-between;
+            border: 1px solid black;
+        }
+
+        .accordionItem .header h3,
+        .accordionItem .header i {
+            pointer-events: none;
+        }
+
+        .accordionItem .header:hover {
+            background-color: black;
+            color: white;
+
+        }
+
+        .accordionItem .header i {
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        .accordionItem .body {
+            max-height: 0;
+            overflow: hidden;
+            margin-top: 0.5rem;
+            transition: all 0.4s;
+            margin-left: 1.5rem;
+        }
+
+        .accordionItem.active {
+            margin: 10px 0px;
+            background-color: rgb(170, 170, 129);
+        }
+
+        .accordionItem.active .body {
+            margin-top: 10px;
+            max-height: 20rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .accordionItem.active .header {
+            background-color: rgba(0, 199, 133, 0.21);
+        }
+
+        .accordionItem.active .header i {
+            transition: all 0.3s;
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: white;border: 2px dotted rgb(197, 228, 240);padding: 5px;">STATIC ACCORDION</h1>
+    <div class="accordionBox">
+        <div class="accordionItem">
+            <div class="header">
+                <h3>Covid-19</h3>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="body">
+                The symptoms of COVID-19 are variable depending on the type of variant contracted, ranging from mild
+                symptoms to a potentially fatal illness. Common symptoms include coughing, fever, loss of smell
+                (anosmia) and taste (ageusia), with less common ones including headaches, nasal congestion and runny
+                nose, muscle pain, sore throat, diarrhea, eye irritation, and toes swelling or turning purple,
+                and in moderate to severe cases, breathing difficulties.People with the COVID-19 infection may have
+                different symptoms, and their symptoms may change over time.
+            </div>
+        </div>
+        <div class="accordionItem">
+            <div class="header">
+                <h3>Treatment</h3>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="body">
+                As of November 2020 use of the glucocorticoid dexamethasone had been strongly recommended in those
+                severe cases treated in hospital with low oxygen levels, to reduce the risk of death.
+                Noninvasive ventilation and, ultimately, admission to an intensive care unit for mechanical ventilation
+                may be required to support breathing. Extracorporeal membrane oxygenation (ECMO) has been used to
+                address respiratory failure, but its benefits are still under consideration. Some of the cases
+                of severe disease course are caused by systemic hyper-inflammation, the so-called cytokine storm.
+            </div>
+        </div>
+        <div class="accordionItem">
+            <div class="header">
+                <h3>History</h3>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="body">
+                The virus is thought to be of natural animal origin, most likely through spillover
+                infection. A joint-study conducted in early 2021 by the People's Republic of China and the
+                World Health Organization indicated that the virus descended from a coronavirus that infects wild bats,
+                and likely spread to humans through an intermediary wildlife host. There are several theories about
+                where the index case originated and investigations into the origin of the pandemic are ongoing.
+                According to articles published in July 2022 in Science, virus transmission into humans occurred through
+                two spillover events in November 2019 and was likely due to live wildlife trade on the Huanan wet market
+                in the city of Wuhan (Hubei, China). Doubts about the conclusions have mostly centered on
+                the precise site of spillover. Earlier phylogenetics estimated that SARS-CoV-2 arose in October or
+                November 2019.
+            </div>
+        </div>
+        <div class="accordionItem">
+            <div class="header">
+                <h3>Prevention</h3>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="body">
+                Preventive measures to reduce the chances of infection include getting vaccinated, staying at home,
+                wearing a mask in public, avoiding crowded places, keeping distance from others, ventilating indoor
+                spaces, managing potential exposure durations,[188] washing hands with soap and water often and for at
+                least twenty seconds, practising good respiratory hygiene, and avoiding touching the eyes, nose, or
+                mouth with unwashed hands.[189][190]
+            </div>
+        </div>
+        <div class="accordionItem">
+            <div class="header">
+                <h3>Research</h3>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="body">
+                International research on vaccines and medicines in COVID‑19 is underway by government organisations,
+                academic groups, and industry researchers. The CDC has classified it to require a BSL3 grade
+                laboratory. There has been a great deal of COVID‑19 research, involving accelerated research
+                processes and publishing shortcuts to meet the global demand.
+
+                As of December 2020, hundreds of clinical trials have been undertaken, with research happening on every
+                continent except Antarctica. As of November 2020, more than 200 possible treatments have been
+                studied in humans.
+            </div>
+        </div>
+        <div class="accordionItem">
+            <div class="header">
+                <h3>Overview</h3>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="body">
+                COVID-19 is the disease caused by the SARS-CoV-2 coronavirus. It usually spreads between people in close
+                contact.
+
+                COVID-19 vaccines provide strong protection against severe illness and death. Although a person can
+                still get COVID-19 after vaccination, they are more likely to have mild or no symptoms.
+
+                Anyone can get sick with COVID-19 and become seriously ill or die, but most people will recover without
+                treatment.
+            </div>
+        </div>
+    </div>
+    <script>
+
+        let accordion = document.querySelector('.accordionBox'),
+            accordionItem = document.querySelectorAll('.accordionItem');
+        accordionItem.forEach(elem => {
+            elem.addEventListener('click', function (e) {
+                e.srcElement.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
